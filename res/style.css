@@ -1,0 +1,98 @@
+/* There style */
+
+body {
+	color:		#fff;
+	background:	#868c91 -webkit-gradient(linear, 0% 0%, 0% 75%, from(#414446), to(#868c91)) no-repeat;
+	font-family: Helvetica, sans-serif;
+	font-size:	12pt;
+}
+
+a {
+	color:		#fff;
+}
+
+hr {
+	margin:		2em 0 0.5em 0;
+	border:		none;
+	background:	#fff;
+	height:		1px;
+}
+
+p {
+	text-align: center;
+}
+
+hr + p {
+	color:		#ddd;
+}
+
+#circles {
+	position:	relative;
+	height:		92px;
+	width:		262px;
+	font-size:	1em;
+	margin:		3em auto 2em;
+}
+
+#circles img {
+	position:	absolute;
+	top:		0;
+	left:		0;
+	border:		none;
+	-webkit-transition: 1s;
+}
+
+.pre img {
+	opacity:	0;
+}
+
+.pulse img {
+	-webkit-animation-name: pulse;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;
+}
+
+.stop #c0, .pulse #c0 {
+	opacity:	0;
+}
+
+.pulse #c1 {
+	-webkit-animation-duration: 2.4s;
+}
+
+.pulse #c2 {
+	-webkit-animation-duration: 2.2s;
+}
+
+@-webkit-keyframes pulse {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+h2 {
+	margin:		0 0 0.2em 0.25em;
+	font-size:	2.5em;
+	text-align:	center;
+	text-shadow: rgba(0,0,0, 0.7) 0 2px 5px;
+	overflow:	hidden;
+	text-overflow: ellipsis;
+}
+
+h3 {
+	margin:		0 0.15em 0 0;
+	min-width:	0.75em;
+	font-size:	2.5em;
+	float:		right;
+	clear:		both;
+}
+
+h2.low, h3.low {
+	font-size:	2em;
+	font-weight: normal;
+}
