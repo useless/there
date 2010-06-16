@@ -2,7 +2,9 @@
 
 body {
 	color:		#fff;
-	background:	#868c91 -webkit-gradient(linear, 0% 0%, 0% 75%, from(#414446), to(#868c91)) no-repeat;
+	background-color: #868c91;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 75%, from(#414446), to(#868c91));
+	background-repeat: no-repeat;
 	font-family: Helvetica, sans-serif;
 	font-size:	12pt;
 }
