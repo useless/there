@@ -39,31 +39,26 @@ hr + p {
 	top:		0;
 	left:		0;
 	border:		none;
-	-webkit-transition: 1s;
 }
 
-.pre img {
+.pre img, .stop #c0, .pulse #c0 {
 	opacity:	0;
 }
 
 .pulse img {
 	-webkit-animation-name: pulse;
-	-webkit-animation-duration: 2s;
+	-webkit-animation-duration: 1s;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-timing-function: ease-in-out;
 }
 
-.stop #c0, .pulse #c0 {
-	opacity:	0;
-}
-
 .pulse #c1 {
-	-webkit-animation-duration: 2.4s;
+	-webkit-animation-duration: 1.2s;
 }
 
 .pulse #c2 {
-	-webkit-animation-duration: 2.2s;
+	-webkit-animation-duration: 1.1s;
 }
 
 @-webkit-keyframes pulse {
