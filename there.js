@@ -1,8 +1,15 @@
+function npl(val, add) {
+	if(val!=null) {
+		return val+add;
+	}
+	return '';
+}
+
 function didLocate(position) {
 	setActivityStatus('done');
 	if(position.coords) {
 		var coo = position.coords;
-		setPosVal(coo.latitude, coo.longitude, '±'+coo.accuracy, true);
+		setPosVal(coo.latitude, coo.longitude, npl(coo.altitude, ', ')+'±'+coo.accuracy, true);
 	} else {
 		setPosVal('??','??','Invalid');
 	}
@@ -59,7 +66,7 @@ function startLocating() {
 		setActivityStatus('pulse');
 		setPosVal('…','…','…');
 		navigator.geolocation.getCurrentPosition(didLocate, locateDidFail,
-			{timeout:10000});
+			{maximumAge:60000, timeout:10000});
 	}
 }
 
